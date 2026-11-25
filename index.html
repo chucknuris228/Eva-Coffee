@@ -12,8 +12,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Manrope:wght@400;500;600&family=Marck+Script&display=swap" rel="stylesheet">
 <script type="application/ld+json">
-[{"@context":"https://schema.org","@type":"CafeOrCoffeeShop","name":"Eva Coffee House — Казахфильм","address":{"@type":"PostalAddress","streetAddress":"мкр. Казахфильм","addressLocality":"Алматы","addressCountry":"KZ"},"telephone":"+77073500757","servesCuisine":["Кофе","Завтраки"],"priceRange":"₸₸","sameAs":["https://www.instagram.com/eva.coffeehouse/"]},
- {"@context":"https://schema.org","@type":"CafeOrCoffeeShop","name":"Eva Coffee House — Ауэзова","address":{"@type":"PostalAddress","streetAddress":"ул. Ауэзова","addressLocality":"Алматы","addressCountry":"KZ"},"telephone":"+77066100757","servesCuisine":["Кофе","Завтраки","Бизнес-ланч"],"priceRange":"₸₸"},
+[{"@context":"https://schema.org","@type":"CafeOrCoffeeShop","name":"Eva Coffee House — Казахфильм","address":{"@type":"PostalAddress","streetAddress":"мкр. Казахфильм, 19Б","addressLocality":"Алматы","addressCountry":"KZ"},"telephone":"+77073500757","servesCuisine":["Кофе","Завтраки"],"priceRange":"₸₸","sameAs":["https://www.instagram.com/eva.coffeehouse/"]},
+ {"@context":"https://schema.org","@type":"CafeOrCoffeeShop","name":"Eva Coffee House — Ауэзова","address":{"@type":"PostalAddress","streetAddress":"ул. Ауэзова, 48","addressLocality":"Алматы","addressCountry":"KZ"},"telephone":"+77066100757","servesCuisine":["Кофе","Завтраки","Бизнес-ланч"],"priceRange":"₸₸"},
  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
   {"@type":"Question","name":"Можно ли поработать в Eva Coffee?","acceptedAnswer":{"@type":"Answer","text":"Да: розетки почти у каждого столика и бесплатный Wi-Fi."}},
   {"@type":"Question","name":"Можно прийти с детьми?","acceptedAnswer":{"@type":"Answer","text":"Да, есть детское меню и игрушки, а шумных зон нет."}},
@@ -94,7 +94,8 @@ button{background:none;border:0;cursor:pointer}
 .intro{background:var(--sky);padding:72px 0 0}
 .intro h1{font-size:clamp(30px,8.4vw,56px);max-width:14ch}
 .intro p{margin-top:22px;max-width:46ch;color:#2f3a42;font-size:15.5px}
-.intro .win{margin-top:42px;position:relative;height:260px;background:var(--paper);overflow:hidden}
+.intro .win{margin-top:42px;position:relative;height:420px;background:var(--paper);overflow:hidden}
+.intro .win img{width:100%;height:100%;object-fit:cover;object-position:center 60%}
 .intro .win svg{position:absolute;inset:0;width:100%;height:100%}
 .intro .cap{position:absolute;right:16px;bottom:12px;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink3)}
 
@@ -171,6 +172,10 @@ button{background:none;border:0;cursor:pointer}
 .cons .tot b{font-family:var(--serif);font-weight:500;font-size:32px}
 .cons .plate{font-size:13px;color:var(--ink2);min-height:20px;margin-bottom:12px}
 
+.gal{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:6px 0 30px}
+.gal img{width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;display:block;transition:transform .3s ease-out}
+@media(min-width:820px){.gal{grid-template-columns:repeat(4,1fr);gap:12px}}
+
 /* библиотека */
 .lib{background:var(--night);color:#efe6da;padding:80px 0 0;overflow:hidden}
 .lib .sec-h p{color:#b9ada0}
@@ -197,6 +202,7 @@ button{background:none;border:0;cursor:pointer}
 .pl article:nth-child(2){background:var(--paper2)}
 .pl .tag{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:#4a5660}
 .pl h3{font-family:var(--serif);font-weight:500;font-size:36px;line-height:1.05;margin:6px 0 10px}
+.pl .addr{font-weight:600;margin:-4px 0 10px;color:var(--ink)}
 .pl p{font-size:14px;color:#3b4148;max-width:34ch}
 .pl .acts{display:flex;gap:8px;margin-top:18px;flex-wrap:wrap}
 .pl .acts a{font-size:11px;letter-spacing:.14em;text-transform:uppercase;border:1px solid var(--ink);padding:10px 14px;background:var(--paper)}
@@ -265,7 +271,7 @@ footer a.u{text-decoration:underline;text-underline-offset:3px}
   .wrap{padding:0 40px}
   .hdr .wrap{height:70px}
   .mtools{top:70px;margin:0 -40px;padding-left:40px;padding-right:40px}
-  .intro .win{height:360px}
+  .intro .win{height:520px}
   .cult .wrap{display:grid;grid-template-columns:1fr 1fr;gap:0 60px}
   .cult .sec-h,.cult .blend{grid-column:1/-1}
   .brew{margin-top:0}
@@ -284,7 +290,7 @@ footer a.u{text-decoration:underline;text-underline-offset:3px}
 </head>
 <body>
 
-<div class="demo">Демо-версия сайта для Eva Coffee House · фото залов и блюд добавим ваши</div>
+<div class="demo">Демо-версия сайта для Eva Coffee House</div>
 
 <header class="hdr">
   <div class="wrap">
@@ -322,25 +328,7 @@ footer a.u{text-decoration:underline;text-underline-offset:3px}
     <p class="reveal">Ласточка вьёт гнездо там, где тепло, и возвращается туда снова. Так и у нас: панорамные окна, полки с книгами, запах свежей арабики и столы, за которыми собирается вся семья: от первого кофе до позднего ужина.</p>
   </div>
   <div class="wrap">
-    <div class="win reveal" aria-hidden="true">
-      <svg viewBox="0 0 400 260" preserveAspectRatio="xMidYMid slice">
-        <rect width="400" height="260" fill="#F3ECE1"/>
-        <g fill="none" stroke="#231B16" stroke-width="1.2">
-          <rect x="30" y="20" width="160" height="200"/><line x1="110" y1="20" x2="110" y2="220"/><line x1="30" y1="120" x2="190" y2="120"/>
-          <rect x="210" y="20" width="160" height="200"/><line x1="290" y1="20" x2="290" y2="220"/><line x1="210" y1="120" x2="370" y2="120"/>
-          <path d="M0 236 H400"/><path d="M120 236 v-26 h60 v26"/><ellipse cx="150" cy="206" rx="22" ry="4"/>
-          <path d="M146 206 c0-14 8-14 8 0" />
-          <path d="M262 236 v-40 m-14 0 h28"/>
-        </g>
-        <g fill="#9DB0BF" opacity=".35"><rect x="31" y="21" width="78" height="98"/><rect x="291" y="121" width="78" height="98"/></g>
-        <g fill="#231B16">
-          <path transform="translate(240 52) scale(.07)" d="M77.2 391.3C77.5 389.7 84.7 383.4 128.0 347.0C171.8 310.2 197.1 284.5 205.1 268.8C208.2 262.7 207.4 257.2 203.0 254.8C198.0 252.0 176.3 252.8 159.5 256.4C125.6 263.7 65.8 283.2 12.1 304.4C5.8 306.9 0.4 308.7 0.1 308.5C-0.9 307.4 1.9 303.7 7.5 298.9C23.7 285.2 89.5 244.8 124.2 227.4C128.4 225.2 131.9 223.3 131.9 223.0C132.0 222.7 122.9 217.9 111.7 212.3C78.4 195.5 49.2 178.1 28.5 162.5C16.1 153.2 -0.0 137.1 0.0 134.1C0.0 131.8 0.0 131.8 25.5 142.0C105.0 173.8 172.1 184.8 188.3 168.6C208.8 148.2 171.5 95.9 81.5 19.1C70.5 9.7 61.3 1.5 61.1 0.9C60.6 -0.7 63.6 -0.1 92.1 7.5C105.5 11.1 132.1 18.0 151.2 23.0C217.5 40.1 243.5 49.2 269.1 64.2C292.9 78.3 302.6 91.8 304.6 114.0C305.0 117.9 305.4 121.0 305.6 121.0C305.8 121.0 308.5 119.4 311.7 117.5C332.0 105.2 364.6 99.8 381.9 105.9C392.7 109.7 400.4 116.2 403.1 123.7C403.9 126.2 404.9 126.9 407.8 127.4C414.3 128.6 424.0 132.1 424.0 133.3C424.0 134.0 421.9 135.6 419.3 137.0C399.8 147.2 382.6 166.3 349.8 213.6C316.8 261.2 287.7 290.0 241.5 320.5C187.8 356.0 131.2 382.3 90.7 390.5C75.9 393.5 76.8 393.4 77.2 391.3Z"/>
-          <path transform="translate(300 78) scale(.045) " d="M77.2 391.3C77.5 389.7 84.7 383.4 128.0 347.0C171.8 310.2 197.1 284.5 205.1 268.8C208.2 262.7 207.4 257.2 203.0 254.8C198.0 252.0 176.3 252.8 159.5 256.4C125.6 263.7 65.8 283.2 12.1 304.4C5.8 306.9 0.4 308.7 0.1 308.5C-0.9 307.4 1.9 303.7 7.5 298.9C23.7 285.2 89.5 244.8 124.2 227.4C128.4 225.2 131.9 223.3 131.9 223.0C132.0 222.7 122.9 217.9 111.7 212.3C78.4 195.5 49.2 178.1 28.5 162.5C16.1 153.2 -0.0 137.1 0.0 134.1C0.0 131.8 0.0 131.8 25.5 142.0C105.0 173.8 172.1 184.8 188.3 168.6C208.8 148.2 171.5 95.9 81.5 19.1C70.5 9.7 61.3 1.5 61.1 0.9C60.6 -0.7 63.6 -0.1 92.1 7.5C105.5 11.1 132.1 18.0 151.2 23.0C217.5 40.1 243.5 49.2 269.1 64.2C292.9 78.3 302.6 91.8 304.6 114.0C305.0 117.9 305.4 121.0 305.6 121.0C305.8 121.0 308.5 119.4 311.7 117.5C332.0 105.2 364.6 99.8 381.9 105.9C392.7 109.7 400.4 116.2 403.1 123.7C403.9 126.2 404.9 126.9 407.8 127.4C414.3 128.6 424.0 132.1 424.0 133.3C424.0 134.0 421.9 135.6 419.3 137.0C399.8 147.2 382.6 166.3 349.8 213.6C316.8 261.2 287.7 290.0 241.5 320.5C187.8 356.0 131.2 382.3 90.7 390.5C75.9 393.5 76.8 393.4 77.2 391.3Z"/>
-        </g>
-        <g fill="#A6814A"><rect x="214" y="222" width="8" height="14"/><rect x="224" y="226" width="6" height="10"/><rect x="232" y="220" width="7" height="16"/></g>
-      </svg>
-      <span class="cap">место для фото зала</span>
-    </div>
+    <div class="win reveal"><img src="img/table.webp" alt="Завтрак в Eva: кофе, боул с гранолой и бейгл со скрэмблом" width="975" height="1400" loading="lazy"></div>
   </div>
 </section>
 
@@ -390,6 +378,12 @@ footer a.u{text-decoration:underline;text-underline-offset:3px}
       <h2 class="caps">Утро, переходящее в день</h2>
       <p>Завтраков так много, что можно приходить всей семьёй и каждый раз открывать новый: от сладких панкейков до сытных тарелок, которые не просто доесть.</p>
     </div>
+    <div class="gal reveal">
+      <img src="img/waffle.webp" alt="Вафля с мороженым и ягодным соусом" width="1000" height="1313" loading="lazy">
+      <img src="img/omelette.webp" alt="Зелёный омлет с горошком и сливочным соусом" width="1000" height="1269" loading="lazy">
+      <img src="img/bowl.webp" alt="Йогуртовый боул с гранолой и бананом" width="1000" height="1247" loading="lazy">
+      <img src="img/bagel.webp" alt="Бейгл со скрэмблом, томатом и салатом" width="1000" height="1252" loading="lazy">
+    </div>
     <div class="rail" id="bfRail"></div>
 
     <div class="cons reveal" id="cons">
@@ -432,16 +426,16 @@ footer a.u{text-decoration:underline;text-underline-offset:3px}
   <div class="pl">
     <article class="reveal">
       <span class="tag">Семейная · весь день</span>
-      <h3>Казахфильм</h3>
+      <h3>Казахфильм</h3><p class="addr">мкр. Казахфильм, 19Б</p>
       <p>Наш первый дом: завтраки до вечера, книги и тихие утра в микрорайоне.</p>
-      <div class="acts"><a class="wa" href="https://wa.me/77073500757" target="_blank" rel="noopener">WhatsApp</a><a href="tel:+77073500757">Позвонить</a><a href="https://2gis.kz/almaty/search/Eva%20Coffee%20Казахфильм" target="_blank" rel="noopener">2GIS</a></div>
+      <div class="acts"><a class="wa" href="https://wa.me/77073500757" target="_blank" rel="noopener">WhatsApp</a><a href="tel:+77073500757">Позвонить</a><a href="https://2gis.kz/almaty/search/Казахфильм%2019Б" target="_blank" rel="noopener">2GIS</a></div>
       <svg class="ghost-sw" viewBox="0 0 424 393" aria-hidden="true"><path class="sw" d="M77.2 391.3C77.5 389.7 84.7 383.4 128.0 347.0C171.8 310.2 197.1 284.5 205.1 268.8C208.2 262.7 207.4 257.2 203.0 254.8C198.0 252.0 176.3 252.8 159.5 256.4C125.6 263.7 65.8 283.2 12.1 304.4C5.8 306.9 0.4 308.7 0.1 308.5C-0.9 307.4 1.9 303.7 7.5 298.9C23.7 285.2 89.5 244.8 124.2 227.4C128.4 225.2 131.9 223.3 131.9 223.0C132.0 222.7 122.9 217.9 111.7 212.3C78.4 195.5 49.2 178.1 28.5 162.5C16.1 153.2 -0.0 137.1 0.0 134.1C0.0 131.8 0.0 131.8 25.5 142.0C105.0 173.8 172.1 184.8 188.3 168.6C208.8 148.2 171.5 95.9 81.5 19.1C70.5 9.7 61.3 1.5 61.1 0.9C60.6 -0.7 63.6 -0.1 92.1 7.5C105.5 11.1 132.1 18.0 151.2 23.0C217.5 40.1 243.5 49.2 269.1 64.2C292.9 78.3 302.6 91.8 304.6 114.0C305.0 117.9 305.4 121.0 305.6 121.0C305.8 121.0 308.5 119.4 311.7 117.5C332.0 105.2 364.6 99.8 381.9 105.9C392.7 109.7 400.4 116.2 403.1 123.7C403.9 126.2 404.9 126.9 407.8 127.4C414.3 128.6 424.0 132.1 424.0 133.3C424.0 134.0 421.9 135.6 419.3 137.0C399.8 147.2 382.6 166.3 349.8 213.6C316.8 261.2 287.7 290.0 241.5 320.5C187.8 356.0 131.2 382.3 90.7 390.5C75.9 393.5 76.8 393.4 77.2 391.3Z"/></svg>
     </article>
     <article class="reveal">
       <span class="tag">В центре · бизнес-ланчи</span>
-      <h3>Ауэзова</h3>
+      <h3>Ауэзова</h3><p class="addr">ул. Ауэзова, 48</p>
       <p>Для тех, кто работает в центре: специально здесь мы запустили формат бизнес-ланчей.</p>
-      <div class="acts"><a class="wa" href="https://wa.me/77066100757" target="_blank" rel="noopener">WhatsApp</a><a href="tel:+77066100757">Позвонить</a><a href="https://2gis.kz/almaty/search/Eva%20Coffee%20Ауэзова" target="_blank" rel="noopener">2GIS</a></div>
+      <div class="acts"><a class="wa" href="https://wa.me/77066100757" target="_blank" rel="noopener">WhatsApp</a><a href="tel:+77066100757">Позвонить</a><a href="https://2gis.kz/almaty/search/Ауэзова%2048" target="_blank" rel="noopener">2GIS</a></div>
       <svg class="ghost-sw" viewBox="0 0 424 393" aria-hidden="true"><path class="sw" d="M77.2 391.3C77.5 389.7 84.7 383.4 128.0 347.0C171.8 310.2 197.1 284.5 205.1 268.8C208.2 262.7 207.4 257.2 203.0 254.8C198.0 252.0 176.3 252.8 159.5 256.4C125.6 263.7 65.8 283.2 12.1 304.4C5.8 306.9 0.4 308.7 0.1 308.5C-0.9 307.4 1.9 303.7 7.5 298.9C23.7 285.2 89.5 244.8 124.2 227.4C128.4 225.2 131.9 223.3 131.9 223.0C132.0 222.7 122.9 217.9 111.7 212.3C78.4 195.5 49.2 178.1 28.5 162.5C16.1 153.2 -0.0 137.1 0.0 134.1C0.0 131.8 0.0 131.8 25.5 142.0C105.0 173.8 172.1 184.8 188.3 168.6C208.8 148.2 171.5 95.9 81.5 19.1C70.5 9.7 61.3 1.5 61.1 0.9C60.6 -0.7 63.6 -0.1 92.1 7.5C105.5 11.1 132.1 18.0 151.2 23.0C217.5 40.1 243.5 49.2 269.1 64.2C292.9 78.3 302.6 91.8 304.6 114.0C305.0 117.9 305.4 121.0 305.6 121.0C305.8 121.0 308.5 119.4 311.7 117.5C332.0 105.2 364.6 99.8 381.9 105.9C392.7 109.7 400.4 116.2 403.1 123.7C403.9 126.2 404.9 126.9 407.8 127.4C414.3 128.6 424.0 132.1 424.0 133.3C424.0 134.0 421.9 135.6 419.3 137.0C399.8 147.2 382.6 166.3 349.8 213.6C316.8 261.2 287.7 290.0 241.5 320.5C187.8 356.0 131.2 382.3 90.7 390.5C75.9 393.5 76.8 393.4 77.2 391.3Z"/></svg>
     </article>
   </div>
